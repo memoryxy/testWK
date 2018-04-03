@@ -20,7 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.wk = [[YXWKWebView alloc] initWithFrame:self.view.bounds];
+    self.wk = [[YXWKWebView alloc] initWithFrame:self.view.bounds]; //崩溃!!!
+//    self.wk = [[YXWKWebView alloc] initWithFrame:self.view.bounds]; //解决崩溃
     [self.view addSubview:self.wk];
     [self.wk loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://m.you.163.com/activity/popWindow?id=9164567&type=2&popWindowExtInfo=&newDevice="]]];
     self.wk.navigationDelegate = self;
